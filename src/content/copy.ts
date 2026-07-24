@@ -19,7 +19,7 @@ export const copy = {
     brand: "MindCare Health",
     headline: "Personalized Mental Healthcare That Puts You First",
     subheadline:
-      "Compassionate therapy, psychiatric care, and wellness programs designed to help you feel your best.",
+      "Compassionate therapy, psychiatric care, and wellness programs designed to help you feel your best. Same-week openings, licensed specialists, and care plans built around your goals — in clinic or virtually.",
     primaryCta: "Book Consult",
     secondaryCta: "Submit Inquiry",
     callCta: "Call",

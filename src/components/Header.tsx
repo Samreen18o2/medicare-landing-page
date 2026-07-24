@@ -43,7 +43,7 @@ export function Header() {
   return (
     <>
       <div
-        className={`mc-nav-wrap relative ${open ? "z-[70]" : ""} ${scrolled ? "is-scrolled" : ""}`}
+        className={`mc-nav-wrap relative ${open ? "is-open z-[100]" : ""} ${scrolled ? "is-scrolled" : ""}`}
       >
         <nav
           className={`mc-nav-bar ${scrolled ? "is-scrolled" : ""}`}
@@ -108,19 +108,23 @@ export function Header() {
 
           <button
             type="button"
-            className="relative z-[80] inline-flex h-11 w-11 items-center justify-center rounded-full border border-mc-dark/10 bg-white text-mc-dark shadow-soft lg:hidden"
+            className="relative z-[110] inline-flex h-11 w-11 items-center justify-center rounded-full border border-mc-dark/10 bg-white text-mc-dark shadow-soft lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X size={20} strokeWidth={2} /> : <Menu size={20} strokeWidth={2} />}
+            {open ? (
+              <X size={22} strokeWidth={2.25} aria-hidden />
+            ) : (
+              <Menu size={22} strokeWidth={2.25} aria-hidden />
+            )}
           </button>
         </nav>
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-[65] lg:hidden">
+        <div className="fixed inset-0 z-[90] lg:hidden">
           <button
             type="button"
             className="absolute inset-0 bg-mc-dark/40 backdrop-blur-sm"

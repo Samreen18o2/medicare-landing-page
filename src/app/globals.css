@@ -186,6 +186,10 @@ summary:focus-visible {
   transition: padding 0.25s ease;
 }
 
+.mc-nav-wrap.is-open {
+  z-index: 100;
+}
+
 .mc-nav-bar {
   max-width: var(--mc-content-max);
   margin-inline: auto;
